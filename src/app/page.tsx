@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const services = [
     {
         title: "Active Directory Forest Migration",
@@ -327,20 +329,34 @@ export default function Home() {
 
                 <section id="contact" className="section finalSection">
                     <div className="container finalCard">
-                        <p className="sectionLabel light">Start with clarity</p>
-                        <h2>Build a practical migration roadmap before risk becomes urgent.</h2>
-                        <p>
-                            Share your current forest, server estate, business drivers, target state, and
-                            timeline. We will help define a controlled path forward.
-                        </p>
+                        <div className="finalCardGrid">
+                            <figure className="contactPortrait">
+                                <Image
+                                    src="/potrait.jpg"
+                                    alt="Directory Migration consultant portrait"
+                                    fill
+                                    sizes="(max-width: 760px) 240px, 280px"
+                                    className="contactPortraitImage"
+                                />
+                            </figure>
 
-                        <div className="actions">
-                            <a className="button lightButton" href="mailto:amitsoft7@gmail.com">
-                                amitsoft7@gmail.com
-                            </a>
-                            <a className="button outlineLight" href="tel:+10000000000">
-                                +61 428 783 404
-                            </a>
+                            <div className="finalCardContent">
+                                <p className="sectionLabel light">Start with clarity</p>
+                                <h2>Build a practical migration roadmap before risk becomes urgent.</h2>
+                                <p>
+                                    Share your current forest, server estate, business drivers, target state,
+                                    and timeline. We will help define a controlled path forward.
+                                </p>
+
+                                <div className="actions">
+                                    <a className="button lightButton" href="mailto:amitsoft7@gmail.com">
+                                        amitsoft7@gmail.com
+                                    </a>
+                                    <a className="button outlineLight" href="tel:+10000000000">
+                                        +61 428 783 404
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

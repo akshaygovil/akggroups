@@ -634,11 +634,34 @@ details p {
     background: var(--dark);
 }
 
-.finalCard h2 {
+.finalCardGrid {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(32px, 5vw, 56px);
+}
+
+.contactPortrait {
+    position: relative;
+    width: clamp(200px, 22vw, 280px);
+    aspect-ratio: 4 / 5;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.06);
+    flex-shrink: 0;
+}
+
+.contactPortraitImage {
+    object-fit: cover;
+}
+
+.finalCardContent h2 {
     max-width: 760px;
 }
 
-.finalCard p:not(.sectionLabel) {
+.finalCardContent p:not(.sectionLabel) {
     max-width: 680px;
     margin-bottom: 30px;
 }
@@ -772,6 +795,15 @@ details p {
 
     .footer p {
         text-align: left;
+    }
+
+    .finalCardGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .contactPortrait {
+        width: min(240px, 70vw);
+        margin-inline: auto;
     }
 }
 
